@@ -1,0 +1,10 @@
+# macOS 시스템 파일
+.DS_Store
+.AppleDouble
+.LSOverride
+
+#그 외
+/bin/
+/.classpath
+/.project
+/.metadata
