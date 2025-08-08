@@ -5,7 +5,7 @@ import java.io.FileNotFoundException;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Sample {
+public class Test4 {
 
 	public static void main(String[] args) throws FileNotFoundException{
 		File file = new File("./src/자기소계/input.txt");
