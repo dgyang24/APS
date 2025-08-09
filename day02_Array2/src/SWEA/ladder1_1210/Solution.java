@@ -29,8 +29,6 @@ public class Solution {
 							row = i;
 							col = j;
 						}
-							
-							
 					}
 				}
 			}
