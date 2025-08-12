@@ -40,8 +40,6 @@ public class Test4 {
 			
 			//그다음에 탐색
 			
-			
-			
 		}// 테스트 케이스 e
 
 		
