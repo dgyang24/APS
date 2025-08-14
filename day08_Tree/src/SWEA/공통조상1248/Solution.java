@@ -1,0 +1,10 @@
+package SWEA.공통조상1248;
+
+public class Solution {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
