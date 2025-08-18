@@ -35,7 +35,7 @@ public class Solution {
 //				if(sum > max)
 //					max = sum;
 //			}
-			System.out.println("#"+tc+" "+max);
+//			System.out.println("#"+tc+" "+max);
 			
 			
 		}

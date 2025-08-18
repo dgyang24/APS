@@ -1,4 +1,4 @@
-package SWEA.중위순회1231;
+package src.SWEA.중위순회1231;
 
 import java.util.Scanner;
 

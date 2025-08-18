@@ -1,4 +1,4 @@
-package SWEA.공통조상1248;
+package src.SWEA.공통조상1248;
 
 public class Solution {
 
