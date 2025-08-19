@@ -1,4 +1,4 @@
-package SWEA.사칙연산1232;
+package src.SWEA.사칙연산1232;
 
 import java.util.Scanner;
 
