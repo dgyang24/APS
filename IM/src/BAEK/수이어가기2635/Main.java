@@ -10,10 +10,6 @@ public class Main {
 		Scanner sc = new Scanner(System.in);
 		// N입력받기
 		int N = sc.nextInt();
-//		//빼는 수 M을 배열로 생성
-//		int[] M = new int[30001];
-//		for(int i = 0; i < M.length; i++)
-//			M[i] = i;
 		// 수 이어가는 리스트 생성
 		List<Integer> result = new ArrayList<>();
 		result.add(N);
@@ -30,7 +26,6 @@ public class Main {
 			// 멈추라고 하기 전까지 반복
 			while (true) {
 				int diff = tmp.get(tmp.size() - 2) - tmp.get(tmp.size() - 1);
-				// N - M[i] >= 0 -> 임시리스트로 추가
 				if (diff >= 0) {
 					tmp.add(diff);
 //						System.out.println("N: " + N);
