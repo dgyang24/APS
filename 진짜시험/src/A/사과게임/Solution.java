@@ -60,8 +60,6 @@ public class Solution {
 				//1사분면
 				if(nr > 0 && nc < 0) {
 					change = q.get(0);
-					//방향 설정 
-					D =(D+change)%4;
 					//방향 카운트
 					cnt += change;
 					//System.out.println("1사분면이다잉~");
@@ -69,8 +67,6 @@ public class Solution {
 				//2사분면
 				else if(nr > 0 && nc > 0 ) {
 					change = q.get(1);
-					//방향 설정 
-					D =(D+change)%4;
 					//방향 카운트
 					cnt += change;
 					//System.out.println("2사분면이다잉~");
@@ -78,8 +74,6 @@ public class Solution {
 				//3사분면
 				else if(nr < 0 && nc > 0) {
 					change = q.get(2);
-					//방향 설정 
-					D =(D+change)%4;
 					//방향 카운트
 					cnt += change;
 					//System.out.println("3사분면이다잉~");
@@ -87,8 +81,6 @@ public class Solution {
 				//4사분면
 				else if(nr < 0 && nc < 0) {
 					change = q.get(3);
-					//방향 설정 
-					D =(D+change)%4;
 					//방향 카운트
 					cnt += change;
 					//System.out.println("4사분면이다잉~");
@@ -102,6 +94,5 @@ public class Solution {
 				cc = appC;
 			}
 		}//사과 순회
-		
 	}//사과 탐색
 }
