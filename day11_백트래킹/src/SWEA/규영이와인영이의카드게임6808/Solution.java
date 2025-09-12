@@ -23,12 +23,12 @@ public class Solution {
 			win = 0;
 
 			// 각 카드 초기화
-			for (int i = 0; i < 9; i++) {
+			for (int i = 0; i < 9; i++)
 				A[i] = sc.nextInt();
-			}
-			// 인영이는 규영이 가지고 있는 건 못가져잉
+			// 인영이는 규영이 가지고 있는 건 못가져잉 <- 이렇게 써야 잘 읽히더라구여...
 			int idx = 0;
 			for (int i = 1; i <= 18; i++) {
+				//규영이 가지고 있니~
 				boolean isIncluded = false;
 				for (int j = 0; j < 9; j++) {
 					if (i == A[j]) {
@@ -39,8 +39,10 @@ public class Solution {
 				if (!isIncluded)
 					B[idx++] = i;
 			}
-			// 초기화 끝
+			// 초기화 끝 ------------------------------
 //			System.out.println(Arrays.toString(B));
+
+
 			// 카드게임 시작하고
 			playGame(0);
 			// 규영이가 이긴횟수 진 횟수 출력
@@ -49,6 +51,7 @@ public class Solution {
 		} // tc
 
 	}// main
+
 
 	// 카드게임 시작
 	static void playGame(int idx) {
@@ -62,27 +65,25 @@ public class Solution {
 			// 규영 vs 인영 0-> 9
 			for (int i = 0; i < 9; i++) {
 				// 숫자 큰 놈은 점수 먹기
-				if (A[i] > tmpB[i])
-					scoreA += A[i] + tmpB[i];
-				else
-					scoreB += A[i] + tmpB[i];
+				if (A[i] > tmpB[i]) scoreA += A[i] + tmpB[i];
+				else scoreB += A[i] + tmpB[i];
 			}
 			// 경기 종료 후 규영이가 이겼으면 winCnt++
 			if (scoreA > scoreB) win++;
+			return;
 		}
 
-		// 재귀부분: 인영이 카드 섞어야겠지? 백트래킹
+		// 재귀부분: 인영이 카드 섞어야겠지? -> 백트래킹
 		for (int i = 0; i < 9; i++) {
 			// 이미 바뀐 부분은 패스!
-			if (visited[i])
-				continue;
-			//방문안한 인덱스 체크하고
+			if (visited[i]) continue;
+			//방문안한 인덱스 체크하고(선택)
 			visited[i] = true;
 			// 인영이의 값을 하나씩 돌리기
 			tmpB[idx] = B[i];
-			
+			//다음 카드(idx+1)를 탐색
 			playGame(idx + 1);
-			// 다시 원상복구
+			// 다시 원상복구 (선택 취소)
 			visited[i] = false;
 
 		}
@@ -92,8 +93,7 @@ public class Solution {
 	// 특정 숫자의 팩토리얼 구하기
 	static int factorial(int n) {
 		// 종료조건
-		if (n == 1)
-			return 1;
+		if (n == 1) return 1;
 		// 재귀
 		return n * factorial(n - 1);
 	}
